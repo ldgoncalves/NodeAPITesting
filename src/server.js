@@ -1,16 +1,21 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
 
-const port = process.env.PORT || 3000;
+var port = 3000;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
+app.use('/api', require('../routes/api.js')(express));
 
-app.use('/', require('./routes')(express));
 
-exports.server = app.listen(port, () => {
-       console.log('Server Active On', port);
+//
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({
+//     extended: true
+// }));
+//
+
+var server = app.listen(port, () => {
+       console.log('Magic happens on port ' + port);
     });
+
+module.exports = server;
