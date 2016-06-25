@@ -16,6 +16,13 @@ describe('API', function() {
             .get('/api/')
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
+            .expect(200,{api: 'welcome'},done);
+    });
+    it('/ should return specified hello:world', function testHealth(done) {
+        request(server)
+            .get('/api/')
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
             .expect(200,{hello: 'world'},done);
     });
     it('/ should return specified healthy:true', function testHealth(done) {
