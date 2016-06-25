@@ -1,5 +1,5 @@
 {
-  "name": "NodeAPI",
+  "name": "node_api",
   "version": "1.0.0",
   "description": "This is my Node API and Unit Testing repository",
   "main": "src/server.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Goncalves",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
