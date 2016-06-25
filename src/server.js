@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-var server = app.listen(port, '107.170.63.239', () => {
+var server = app.listen(port, () => {
        console.log('Magic happens on port ' + port);
     });
 
